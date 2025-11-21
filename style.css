@@ -18,7 +18,7 @@ header {
 }
 
 .container {
-  width: 1024px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -28,7 +28,7 @@ header {
 
 .menu {
   display: flex;
-  gap: 50px;
+  gap: 80px;
 }
 
 .menu li {
@@ -42,6 +42,10 @@ header {
     color: black;
     letter-spacing: 10%;
   }
+}
+
+.burger-menu {
+  display: none;
 }
 
 .menu li a:hover {
@@ -63,7 +67,7 @@ header {
   font-size: 16px;
   font-weight: 400;
   color: #727272;
-  width: 540px;
+  max-width: 540px;
   padding-bottom: 65px;
 }
 
@@ -96,7 +100,7 @@ section.about-me {
 .about-me p {
   font-size: 16px;
   color: #727272;
-  width: 540px;
+  max-width: 540px;
   line-height: 164%;
   margin: 0 auto;
   padding-bottom: 50px;
@@ -123,6 +127,8 @@ section.about-me {
   padding-block: 100px;
   display: flex;
   gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -158,8 +164,6 @@ section.about-me {
   font-size: 16px;
 }
 
-
-
 section.how-i-work {
   background-color: #f9f9f9;
 }
@@ -177,7 +181,7 @@ section.how-i-work {
 .how-i-work p {
   font-size: 16px;
   color: #727272;
-  width: 540px;
+  max-width: 540px;
   line-height: 164%;
   margin: 0 auto;
 }
@@ -195,7 +199,7 @@ section.how-i-work {
 
 .footer-bg {
   padding-block: 50px;
-  background-color: #34547A;
+  background-color: #34547a;
   color: #f9f9f9;
 }
 
@@ -206,6 +210,94 @@ section.how-i-work {
 }
 
 .copyright {
-font-size: 13px ;
-font-weight: lighter;
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 65px;
+    row-gap: 15px;
+  }
+
+  .menu li {
+    list-style: none;
+
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: black;
+      letter-spacing: 10%;
+    }
+  }
+
+  .main-title h1 {
+    font-size: 32px;
+  }
+
+  .main-text {
+    font-size: 14px;
+    max-width: 440px;
+  }
+
+  .write-me {
+    padding: 20px 36px 12px 36px;
+  }
+
+  .about-me h2 {
+    font-size: 24px;
+  }
+
+  .about-me p {
+    font-size: 14px;
+    max-width: 440px;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .num {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .how-i-work h2 {
+    font-size: 24px;
+  }
+
+  .how-i-work p {
+    font-size: 14px;
+    max-width: 440px;
+  }
+
+  .author {
+    font-size: 18px;
+  } 
+   
+  .copyright {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu {
+    display: none;
+  }
+
+  .navigation {
+    padding-bottom: 20px;
+  }
+
+  .burger-menu {
+    display: inline;
+  }
 }
