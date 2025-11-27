@@ -1,8 +1,13 @@
+@use "variables" as var;
+@use "mixins" as mix;
+@use "header";
+
+
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
 }
 
 * {
@@ -12,14 +17,17 @@
   font-family: "Roboto", sans-serif;
 }
 
-header {
-  background-color: #eeeff1;
-  padding-bottom: 140px;
-}
+
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
+  padding-inline: 20px;
+}
+
+header {
+  background-color: #eeeff1;
+  padding-bottom: 140px;
 }
 
 .navigation {
@@ -39,7 +47,7 @@ header {
     font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
-    color: black;
+    color: var.$text-main-color;
     letter-spacing: 10%;
   }
 }
@@ -49,7 +57,7 @@ header {
 }
 
 .menu li a:hover {
-  color: #34547a;
+  color: var.$main-color;
 }
 
 .main-title {
@@ -59,14 +67,14 @@ header {
 .main-title h1 {
   font-size: 48px;
   font-weight: 600;
-  color: black;
+  color: var.$text-main-color;
   padding-bottom: 60px;
 }
 
 .main-text {
   font-size: 16px;
   font-weight: 400;
-  color: #727272;
+  color: var.$secondary-text-color;
   max-width: 540px;
   padding-bottom: 65px;
 }
@@ -75,8 +83,8 @@ header {
   appearance: none;
   border: none;
   padding: 25px 41px 17px 41px;
-  background-color: #34547a;
-  color: white;
+  background-color: var.$main-color;
+  color: var.$writeme-color;
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 2px;
@@ -90,50 +98,36 @@ section.about-me {
 .about-me {
   padding-block: 112px 100px;
   text-align: center;
+ 
 }
 
 .about-me h2 {
   font-size: 32px;
   padding-bottom: 50px;
+  color: var.$text-main-color;
 }
 
 .about-me p {
   font-size: 16px;
-  color: #727272;
+  color: var.$secondary-text-color;
   max-width: 540px;
   line-height: 164%;
   margin: 0 auto;
   padding-bottom: 50px;
 }
 
-/* .projects {
-  background-color: #34547A;
-}
 
-.my-projects {
-  display: flex;
-  gap: 50px;
-  color: white;
-  padding-block: 100px;
-}
-
-.my-projects li {
-  list-style: none;
-  width: 141px;
-  height: 50px;
-} */
 
 .projects {
+  @include mix.flex-wrap;
   padding-block: 100px;
-  display: flex;
   gap: 50px;
   justify-content: center;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
 .bg-color {
-  background-color: #34547a;
+  background-color: var.$main-color;
 }
 
 .item {
@@ -176,11 +170,12 @@ section.how-i-work {
 .how-i-work h2 {
   font-size: 32px;
   padding-bottom: 50px;
+  color: var.$text-main-color;
 }
 
 .how-i-work p {
   font-size: 16px;
-  color: #727272;
+  color: var.$secondary-text-color;
   max-width: 540px;
   line-height: 164%;
   margin: 0 auto;
@@ -198,7 +193,7 @@ section.how-i-work {
 
 .footer-bg {
   padding-block: 50px;
-  background-color: #34547a;
+  background-color: var.$main-color;
   color: #f9f9f9;
 }
 
@@ -215,8 +210,7 @@ section.how-i-work {
 
 @media (max-width: 768px) {
   .menu {
-    display: flex;
-    flex-wrap: wrap;
+    @include mix.flex-wrap;
     column-gap: 65px;
     row-gap: 15px;
   }
@@ -229,7 +223,7 @@ section.how-i-work {
       font-weight: 500;
       text-transform: uppercase;
       text-decoration: none;
-      color: black;
+      color: var.$text-main-color;
       letter-spacing: 10%;
     }
   }

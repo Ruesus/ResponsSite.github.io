@@ -1,0 +1,294 @@
+@font-face{
+  font-family:"Roboto";
+  font-style:normal;
+  font-weight:400;
+  src:url("../../assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+}
+*{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:"Roboto", sans-serif;
+}
+
+.container{
+  max-width:1280px;
+  margin:0 auto;
+  padding-inline:20px;
+}
+
+header{
+  background-color:#eeeff1;
+  padding-bottom:140px;
+}
+
+.navigation{
+  padding-block:80px;
+}
+
+.menu{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  gap:80px;
+}
+
+.menu li{
+  list-style:none;
+}
+.menu li a{
+  font-size:16px;
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:rgb(0, 0, 0);
+  letter-spacing:10%;
+}
+
+.burger-menu{
+  display:none;
+}
+
+.menu li a:hover{
+  color:#34547A;
+}
+
+.main-title{
+  padding-top:83px;
+}
+
+.main-title h1{
+  font-size:48px;
+  font-weight:600;
+  color:rgb(0, 0, 0);
+  padding-bottom:60px;
+}
+
+.main-text{
+  font-size:16px;
+  font-weight:400;
+  color:#727272;
+  max-width:540px;
+  padding-bottom:65px;
+}
+
+.write-me{
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+  border:none;
+  padding:25px 41px 17px 41px;
+  background-color:#34547A;
+  color:rgb(255, 255, 255);
+  text-transform:uppercase;
+  font-size:16px;
+  letter-spacing:2px;
+  font-weight:lighter;
+}
+
+section.about-me{
+  background-color:#f9f9f9;
+}
+
+.about-me{
+  padding-block:112px 100px;
+  text-align:center;
+}
+
+.about-me h2{
+  font-size:32px;
+  padding-bottom:50px;
+  color:rgb(0, 0, 0);
+}
+
+.about-me p{
+  font-size:16px;
+  color:#727272;
+  max-width:540px;
+  line-height:164%;
+  margin:0 auto;
+  padding-bottom:50px;
+}
+
+.projects{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+  padding-block:100px;
+  gap:50px;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center;
+  justify-content:center;
+}
+
+.bg-color{
+  background-color:#34547A;
+}
+
+.item{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  gap:20px;
+}
+
+.text{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-direction:column;
+          flex-direction:column;
+  color:white;
+  gap:2px;
+}
+
+.icon{
+  width:50px;
+  height:50px;
+}
+
+.num{
+  font-weight:500;
+  font-size:21px;
+}
+
+.label{
+  font-weight:lighter;
+  font-size:16px;
+}
+
+section.how-i-work{
+  background-color:#f9f9f9;
+}
+
+.how-i-work{
+  padding-block:100px 60px;
+  text-align:center;
+}
+
+.how-i-work h2{
+  font-size:32px;
+  padding-bottom:50px;
+  color:rgb(0, 0, 0);
+}
+
+.how-i-work p{
+  font-size:16px;
+  color:#727272;
+  max-width:540px;
+  line-height:164%;
+  margin:0 auto;
+}
+
+.video-bg{
+  background-color:#f9f9f9;
+  padding-bottom:100px;
+}
+
+.working-video{
+  width:100%;
+  aspect-ratio:16/9;
+}
+
+.footer-bg{
+  padding-block:50px;
+  background-color:#34547A;
+  color:#f9f9f9;
+}
+
+.author{
+  font-weight:500;
+  font-size:21px;
+  padding-bottom:15px;
+}
+
+.copyright{
+  font-size:13px;
+  font-weight:lighter;
+}
+
+@media (max-width: 768px){
+  .menu{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    -webkit-column-gap:65px;
+       -moz-column-gap:65px;
+            column-gap:65px;
+    row-gap:15px;
+  }
+  .menu li{
+    list-style:none;
+  }
+  .menu li a{
+    font-size:14px;
+    font-weight:500;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+    letter-spacing:10%;
+  }
+  .main-title h1{
+    font-size:32px;
+  }
+  .main-text{
+    font-size:14px;
+    max-width:440px;
+  }
+  .write-me{
+    padding:20px 36px 12px 36px;
+  }
+  .about-me h2{
+    font-size:24px;
+  }
+  .about-me p{
+    font-size:14px;
+    max-width:440px;
+  }
+  .icon{
+    width:35px;
+    height:35px;
+  }
+  .num{
+    font-size:16px;
+  }
+  .label{
+    font-size:12px;
+  }
+  .how-i-work h2{
+    font-size:24px;
+  }
+  .how-i-work p{
+    font-size:14px;
+    max-width:440px;
+  }
+  .author{
+    font-size:18px;
+  }
+  .copyright{
+    font-size:10px;
+  }
+}
+
+@media (max-width: 375px){
+  .menu{
+    display:none;
+  }
+  .navigation{
+    padding-bottom:20px;
+  }
+  .burger-menu{
+    display:inline;
+  }
+}
